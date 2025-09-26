@@ -1,0 +1,66 @@
+/* Container */
+.container {
+  display: grid;
+  gap: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  height: 300px;
+  margin: 20px auto;
+  width: 600px;
+}
+
+/* Top section (about ME) */
+.about {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  background-color: #888fffd4;
+  border: 5px solid black;
+  border-radius: 12px;
+  padding: 20px;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Profile Picture */
+.profile-pic {
+  width: 150px;
+  height: 150px;
+  border-radius: 100%;
+  overflow: hidden;       /* For img to stay inside the circle */
+  border: 3px solid #d46aff;
+}
+
+.profile-pic img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;     /* Crops the img to fill circle */
+  display: block;
+}
+
+/* Bottom section */
+.bottom {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.hobbies, .aspiration {
+  background-color: #888fffd4;
+  border: 3px solid #d46aff;
+  border-radius: 12px;
+  padding: 15px;
+    box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
+  overflow-y: auto;      /* Scroll if content overflows */
+   max-height: 150px;     /* Limit height */
+}
+
+/* Responsive: For smaller screens */
+@media (max-width: 420px) {
+  .about {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .bottom {
+    grid-template-columns: 1fr;
+  }
+}
